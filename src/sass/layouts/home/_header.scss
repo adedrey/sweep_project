@@ -1,0 +1,53 @@
+.header {
+  background-color: #fff;
+  grid-column: 1 / -1;
+  padding: .5rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__logo-box {
+    display: grid;
+    grid-template-columns: min-content min-content;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  &__logo {
+    height: 9rem;
+    width: 9rem;
+  }
+
+  &__logo-text {
+    font-size: 2.4rem;
+    color: $color-black;
+    font-weight: 700;
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+    padding-left: 2rem;
+    border-left: 2px solid rgba($color: $color-black, $alpha: 0.6);
+  }
+}
+
+.nav-btn {
+  border: none;
+  border-radius: 0;
+
+  background-color: $color-black;
+  height: 2px;
+  width: 4.5rem;
+  // margin-top: 4rem;
+
+  &::before,
+  &::after {
+      background-color: $color-black;
+      height: 2px;
+      width: 4.5rem;
+      content: "";
+      display: block;
+  }
+
+  &::before { transform: translateY(-1.5rem); }
+  &::after { transform: translateY(1.3rem); }
+}

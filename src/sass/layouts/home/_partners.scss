@@ -1,0 +1,72 @@
+.section-partners {
+  background-color: $color-tertiary-light;
+  background-image: linear-gradient(rgba($color-tertiary-dark, 0.9), rgba($color-tertiary-dark, 0.9)), url(../../../assets/img/college-3.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  grid-column: 1 / -1;
+}
+
+.partners {
+  margin: 8rem 15rem;
+  display: grid;
+  grid-template-columns: minmax(15rem, min-content) max-content minmax(
+      25rem,
+      min-content
+    ); // repeat(4, minmax(20rem, min-content));
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  gap: 2.4rem;
+
+  &__img {
+    width: 100%;
+    opacity: .8;
+  }
+
+  &__btn {
+    background-color: rgba($color: $color-black, $alpha: 0.9);
+    color: rgba($color-tertiary-dark, 1.0);
+    border: none;
+    border-radius: 0;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    padding: 3rem;
+    cursor: pointer;
+    transition: all 0.2s;
+
+    &:hover {
+      background-color: $color-black;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    gap: 0;
+
+    &--subheading {
+      font-size: 2.4rem;
+      letter-spacing: 0.75;
+      text-transform: uppercase;
+      color: rgba($color: $color-black, $alpha: 0.8);
+
+      span {
+        font-weight: 700;
+      }
+    }
+
+    &--heading {
+      font-size: 3rem;
+      letter-spacing: 0.75;
+      color: $color-black;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    &--text {
+      // margin-top: -3px;
+    }
+  }
+}

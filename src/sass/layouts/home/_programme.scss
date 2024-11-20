@@ -1,0 +1,92 @@
+.section-programme {
+  background-image: linear-gradient(rgba($color-grey-light-3, 0.9), rgba($color-grey-light-3, 0.9)), url(../../../assets/img/college-1.jpg);
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  grid-column: full-start / full-end;
+}
+
+.card-programme {
+  margin: 8rem 8rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(min-content, 35rem));
+  justify-content: center;
+  column-gap: 7rem;
+  row-gap: 6rem;
+}
+
+.programme {
+  background-color: $color-grey-light-1;
+  display: grid;
+  border-radius: 3px;
+  overflow: hidden;
+  box-shadow: 0 1.5rem 4rem rgba($color-black, .2);
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 3.5rem;
+  transition: all .2s;
+
+  &:hover {
+    transform: translateY(-1rem);
+  }
+
+
+  &__heading {
+    grid-column: 1 / -1;
+    justify-self: center;
+  }
+
+  &__img {
+    width: 100%;
+    grid-column: 1 / span 2;
+    grid-row: 1 / 2;
+    z-index: 2;
+  }
+
+  &__name {
+    font-size: 1.6rem;
+    color: $color-grey-light-2;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.75;
+    background-color: $color-black;
+    width: 80%;
+    padding: 1.25rem;
+    grid-column: 1 / span 2;
+    grid-row: 1 / 2;
+    align-self: end;
+    justify-self: center;
+    z-index: 10;
+    transform: translateY(50%);
+  }
+
+  &__type,
+  &__duration {
+    margin-top: 2.5rem;
+  }
+
+  &__type,
+  &__duration,
+  &__lab,
+  &__research {
+    font-size: 1.5rem;
+    display: flex;
+    gap: 1rem;
+    margin-left: 2rem;
+    align-items: center;
+
+    svg {
+      fill: $color-secondary-light;
+      height: 2rem;
+      width: 2rem;
+    }
+
+    p {
+      color: rgba($color: $color-black, $alpha: 0.8);
+    }
+  }
+
+  &__btn {
+
+    grid-column: 1 / span 2;
+  }
+}

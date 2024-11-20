@@ -1,0 +1,6 @@
+.container {
+  display: grid;
+  grid-template-rows: 6rem calc(100% - 6rem);
+  grid-template-columns: [full-start] 25rem [sidebar-end content-start] calc(100% - 25rem) [full-end];
+}
+

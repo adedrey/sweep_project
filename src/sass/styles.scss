@@ -1,0 +1,32 @@
+// Abstract
+@import "./abstracts/functions";
+@import "./abstracts/mixins";
+@import "./abstracts/variables";
+
+// Base
+@import "./base/animations";
+@import "./base/base";
+@import "./base/typography";
+@import "./base/utilities";
+
+// Components
+@import './components/buttons';
+
+// Layouts
+@import "./layouts/home/header";
+@import "./layouts/home/hero";
+@import "./layouts/home/info";
+@import "./layouts/home/featured";
+@import "./layouts/home/colleges";
+@import "./layouts/home/story";
+@import "./layouts/home/programme";
+@import "./layouts/home/partners";
+@import "./layouts/home/footer";
+
+@import "./layouts/login/login";
+
+@import "./layouts/dashboard/header";
+@import "./layouts/dashboard/content";
+@import "./layouts/dashboard/sidebar"
+
+

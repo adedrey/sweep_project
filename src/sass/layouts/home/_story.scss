@@ -1,0 +1,71 @@
+.story {
+  &__picture {
+    background-color: $color-tertiary-dark;
+    grid-column: full-start / col-end 2;
+    background-image: url(../../../assets/img/hod.jpg);
+    background-size: cover;
+    background-position: top;
+  }
+
+  &__content {
+    grid-column: col-start 3 / col-end 7;
+    margin: 1.2rem;
+    display: grid;
+    align-content: center;
+    row-gap: 1.2rem;
+
+    .paragraph {
+      // align-self: flex-start;
+    }
+  }
+
+  &__btn {
+    &:link,
+    &:visited {
+      font-size: 1.6rem;
+      border: none;
+      text-decoration: none;
+      display: inline-block;
+      color: $color-grey-light-2;
+      background-color: rgba($color: $color-black, $alpha: 0.9);
+      border-radius: 3px;
+      display: flex;
+      gap: 0.6rem;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s;
+    }
+
+    &:hover,
+    &:active {
+      background-color: $color-black;
+      transform: translateY(-0.5rem);
+    }
+  }
+
+  &__btn-content {
+    justify-self: start;
+    padding: 1.6rem 3.2rem;
+  }
+
+  &__btn-portal {
+    // justify-self: center;
+    padding: 1.2rem 4.2rem;
+
+    svg {
+      width: 1.6rem;
+      height: 1.6rem;
+      fill: $color-grey-light-2;
+    }
+  }
+
+  &__portal {
+    grid-column: col-start 8 / -1;
+    margin: 1.2rem;
+    margin-left: 0;
+    display: grid;
+    gap: 1.2rem;
+    justify-content: center;
+    align-content: center;
+  }
+}

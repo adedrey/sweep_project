@@ -1,0 +1,14 @@
+.content {
+  background-color: $color-grey-light-1;
+  grid-column: content-start / full-end;
+  z-index: 10;
+  display: grid;
+  grid-template-columns: [full-start] minmax(3rem, 12rem) [content-start] minmax(min-content, 1fr) [content-end] minmax(3rem, 12rem) [full-end];
+
+  &__container {
+    grid-column: content-start / content-end;
+  }
+}
+
+
+

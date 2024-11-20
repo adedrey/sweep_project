@@ -1,0 +1,58 @@
+<div class="container">
+  <header class="dashboard-header">
+    <div class="header__btn-box">
+      <button class="header__nav-btn"></button>
+    </div>
+    <p class="header__heading">Faculty of Computing and Informatics</p>
+
+    <nav class="user-nav">
+      <div class="user-nav__user">
+        <svg>
+          <use xlink:href="../../../assets/sprite.svg#icon-user"></use>
+        </svg>
+        <span>Sweep Team</span>
+      </div>
+    </nav>
+  </header>
+  <div class="side-bar">
+    <div class="side-bar__logo-box">
+      <img src="../../../assets/img/lautechLogo.jpeg" alt="Logo" class="side-bar__logo-box--img">
+    </div>
+    <nav class="side-nav u-margin-bottom-big">
+      <div class="side-bar__content">
+        <ul class="side-bar__list">
+          <li class="side-bar__item side-bar__item--active">
+            <a routerLink="/staff/dashboard/home" class="side-bar__link">
+              <svg class="side-bar__icon">
+                <use xlink:href="../../../assets/sprite.svg#icon-home"></use>
+              </svg>
+              <span>Home</span>
+            </a>
+          </li>
+          <li class="side-bar__item">
+            <a href="#" class="side-bar__link">
+              <svg class="side-bar__icon">
+                <use xlink:href="../../../assets/sprite.svg#icon-news"></use>
+              </svg>
+              <span>About Us</span>
+            </a>
+          </li>
+          <li class="side-bar__item">
+            <a routerLink="/staff/dashboard/inbox" class="side-bar__link">
+              <svg class="side-bar__icon">
+                <use xlink:href="../../../assets/sprite.svg#icon-install"></use>
+              </svg>
+              <span>Inbox</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    </nav>
+  </div>
+  <main class="content">
+      <div class="content__container">
+        <router-outlet></router-outlet>
+      </div>
+  </main>
+</div>

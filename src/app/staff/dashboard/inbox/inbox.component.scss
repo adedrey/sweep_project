@@ -1,0 +1,57 @@
+@import "../../../../sass/abstracts/variables";
+.inbox {
+  &__paragraph {
+    color: rgba(#000, 0.75);
+    font-weight: 400;
+    font-size: 1.4rem;
+  }
+}
+
+.messages {
+  display: grid;
+  grid-template-columns: min-content minmax(min-content, 32vw);
+  column-gap: 3rem;
+  row-gap: 1.5rem;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid rgba($color-grey-light-3, 0.9);
+  }
+
+  &__icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    fill: rgba(#000, 0.75);
+    grid-row: 1 / span 2;
+    grid-column: 1 / 2;
+  }
+
+  &__header {
+    display: flex;
+    gap: 1rem;
+
+    &--title {
+      color: rgba(#000, 0.75);
+      font-weight: 700;
+      font-size: 1.4rem;
+    }
+
+    &--subheading {
+      color: rgba(#000, 0.5);
+      font-weight: 400;
+      font-size: 1.1rem;
+      align-self: flex-end;
+    }
+  }
+
+  &__content {
+    display: grid;
+    row-gap: 1.2rem;
+    margin-bottom: 3rem;
+    &--paragraph {
+      color: rgba(#000, 0.75);
+      font-weight: 400;
+      font-size: 1.4rem;
+      line-height: 1.5;
+    }
+  }
+}

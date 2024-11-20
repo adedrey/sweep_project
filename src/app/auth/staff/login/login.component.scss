@@ -1,0 +1,17 @@
+@import "../../../../sass/abstracts/variables";
+
+.container {
+  background-image: linear-gradient(
+      rgba($color-grey-light-3, 0.8),
+      rgba($color-grey-light-3, 0.8)
+    ),
+    url(../../../../assets/img/header.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: grid;
+  grid-template-rows: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+

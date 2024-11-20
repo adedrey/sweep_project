@@ -1,0 +1,63 @@
+.section-info {
+  background-color: $color-black;
+  grid-column: col-start 7 / -1;
+  padding: 3rem;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  align-content: center;
+  gap: 2rem;
+}
+
+.info {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  align-items: center;
+  gap: 2rem;
+
+  &__img {
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+    display: block;
+  }
+
+  &__details {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+
+    &-text {
+      line-height: 1.2;
+    }
+
+    &-date {
+      text-transform: uppercase;
+      color: rgba($color: $color-grey-light-1, $alpha: 0.75);
+    }
+  }
+
+  &__btn {
+    &:link,
+    &:visited {
+      font-size: 1.6rem;
+      display: inline-block;
+      color: $color-secondary-light;
+      text-decoration: none;
+      border-bottom: 1px solid currentColor;
+      padding: 3px;
+      transition: all 0.3s;
+    }
+
+    &:hover {
+      color: $color-secondary-dark;
+      box-shadow: 0 1rem 2rem rgba($color-black, 0.15);
+      transform: translateY(-2px);
+    }
+
+    &:active {
+      box-shadow: 0 0.5rem 1rem rgba($color-black, 0.15);
+      transform: translateY(0);
+    }
+  }
+}

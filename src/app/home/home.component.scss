@@ -1,0 +1,8 @@
+@import '../../sass/abstracts/variables';
+
+.container {
+  background-color: $color-grey-light-2;
+  display: grid;
+  grid-template-rows: 10rem calc(100vh - 10rem) repeat(2, min-content) 40vw repeat(3, min-content);
+  grid-template-columns: [full-start] minmax(6rem, 1fr) repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) minmax(6rem, 1fr) [full-end];
+}

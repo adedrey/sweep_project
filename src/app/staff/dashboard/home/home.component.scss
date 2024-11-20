@@ -1,0 +1,222 @@
+@import "../../../../sass/abstracts/variables";
+
+.inbox {
+  margin-top: 6rem;
+  // background-color: $color-grey-light-2;
+  background-color: inherit;
+  // border: 3px solid rgba($color-grey-light-3, 0.9);
+  box-shadow: 0 1rem 2.5rem rgba($color-black, 0.2);
+  border-radius: 4.5px;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  align-items: center;
+  column-gap: 3rem;
+
+  &__icon {
+    height: 6rem;
+    width: 6rem;
+    fill: rgba(#000, 0.75);
+    grid-row: 1 / -1;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__heading {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: rgba(#000, 0.75);
+
+    span {
+      color: $color-secondary-light;
+    }
+  }
+
+  &__subheading {
+    margin-top: -7px;
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: rgba(#000, 0.75);
+  }
+}
+
+.news {
+  color: rgba(#000, 0.75);
+  font-weight: 400;
+  font-style: italic;
+  font-size: 1.4rem;
+  margin-top: 6rem;
+
+  p:not(:last-child) {
+    margin-bottom: 1.5rem;
+  }
+}
+
+.account {
+  display: grid;
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+    // grid-template-columns: min-content min-content(min-content, 6rem);
+
+    &--icon {
+      border: 6px solid rgba($color-grey-light-3, 0.9);
+      border-radius: 50%;
+      padding: 1.5rem;
+      grid-column: 1 / span 2;
+      svg {
+        width: 6rem;
+        height: 6rem;
+        fill: rgba(#000, 0.65);
+      }
+    }
+
+    &--heading {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: rgba(#000, 0.75);
+    }
+  }
+
+  &__content {
+    background-color: inherit;
+    box-shadow: 0 1rem 2.5rem rgba($color-black, 0.2);
+    border-radius: 4.5px;
+
+    display: grid;
+
+    &--application {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 4.2rem 2rem;
+      border-bottom: 1px solid rgba($color-grey-light-3, 0.9);
+    }
+
+    &--opts {
+      display: flex;
+      gap: 1.2rem;
+    }
+
+    &-btn {
+      &:link,
+      &:visited {
+        text-decoration: none;
+        padding: 1.2rem 1.5rem;
+        border-radius: 3px;
+        transition: all 0.2s;
+        font-size: 1.4rem;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        gap: 1.2rem;
+        border: none;
+        cursor: pointer;
+      }
+
+      &--edit {
+        background-color: $color-secondary-light;
+        color: $color-grey-light-2;
+      }
+
+      &--view {
+        background-color: rgba($color-grey-light-3, 0.9);
+        color: rgba(#000, 0.75);
+      }
+    }
+
+    &--about {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+
+      &-rank {
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: rgba(#000, 0.75);
+      }
+
+      span {
+        text-align: center;
+        margin-top: -7px;
+        align-self: flex-start;
+        padding: 0 5px;
+        border: 2px solid rgba($color-grey-light-3, 0.9);
+        border-radius: 3px;
+        font-size: 1.2rem;
+        font-weight: 400;
+        color: rgba(#000, 0.75);
+      }
+    }
+
+    &--icon {
+      width: 1.5rem;
+      height: 1.5rem;
+      fill: currentColor;
+    }
+  }
+
+  &__qualification {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    &--profile {
+      display: flex;
+      gap: 3.2rem;
+      padding: 3.2rem 2rem;
+    }
+
+    &--content {
+      display: grid;
+      grid-template-columns: min-content 1fr;
+      gap: 0.8rem;
+      align-items: center;
+
+      .account__qualifiation--type {
+        text-align: center;
+        padding: 0 5px;
+        border: 2px solid rgba($color-grey-light-3, 0.9);
+        border-radius: 3px;
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: rgba(#000, 0.75);
+      }
+
+      .account__qualification--specialization {
+        font-size: 1.4rem;
+        font-weight: 400;
+        color: rgba(#000, 0.75);
+      }
+    }
+
+    &--number {
+      font-size: 3.6rem;
+      font-weight: 700;
+      color: rgba($color-grey-dark-2, 0.75);
+    }
+
+    &--school {
+      grid-column: 1 / span 2;
+      margin-top: -10px;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: rgba($color-grey-dark-2, 0.75);
+      display: flex;
+      gap: 0.8rem;
+      align-content: center;
+      align-items: center;
+      justify-items: center;
+
+      svg {
+        width: 1.5rem;
+        height: 1.5rem;
+        fill: rgba($color-grey-dark-3, 0.75);
+      }
+    }
+  }
+}

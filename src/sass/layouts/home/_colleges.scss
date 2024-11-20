@@ -1,0 +1,121 @@
+.section-colleges {
+  background-image: linear-gradient(rgba($color-grey-light-3, 0.9), rgba($color-grey-light-3, 0.9)), url(../../../assets/img/college.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  grid-column: 1 / -1;
+}
+
+.card {
+  display: grid;
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  position: relative;
+  height: 25rem;
+
+  &:hover .college__picture--front {
+    transform: rotateY(-180deg);
+  }
+
+  &:hover .college__picture--back {
+    transform: rotateY(0);
+  }
+}
+
+.college-cta {
+  align-self: flex-start;
+}
+
+.college {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(35rem, min-content));
+  grid-template-rows: min-content 25rem;
+  grid-auto-rows: 25rem;
+  gap: 4.5rem;
+  margin: 4.8rem 3rem 6.4rem 3rem;
+  justify-content: center;
+
+  &__text {
+    font-size: 1.6rem;
+    color: $color-grey-light-2;
+  }
+
+  &__heading {
+    grid-column: 1 / -1;
+    border-left: 0.5rem solid $color-grey-dark-3;
+    padding: 3rem;
+
+    &-subtitle {
+      font-size: 3rem;
+      letter-spacing: 0.75;
+      font-weight: 300;
+      color: $color-grey-dark-3;
+    }
+
+    &-title {
+      font-size: 3.4rem;
+      letter-spacing: 0.75;
+      color: $color-grey-dark-3;
+    }
+  }
+
+  &__picture {
+    background-size: cover;
+    width: 100%;
+    background-position: top;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
+    display: grid;
+    top: 0;
+    left: 0;
+    grid-template-rows: minmax(25rem, max-content);
+    position: absolute;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transition: all 0.8s ease;
+
+    &--front {
+      justify-items: start;
+      align-items: end;
+    }
+
+    &--back {
+      background-image: linear-gradient(
+        to right bottom,
+        $color-tertiary-light,
+        $color-tertiary-dark
+      );
+      // min-height: 25rem;
+      transform: rotateY(180deg);
+
+      &-content {
+        margin: 0 1.2rem;
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        gap: 1.2rem;
+      }
+    }
+
+    &--1 {
+      background-image: url(../../../assets/img/college-1.jpg);
+    }
+
+    &--2 {
+      background-image: url(../../../assets/img/college-2.jpg);
+    }
+
+    &--3 {
+      background-image: url(../../../assets/img/college-3.jpg);
+    }
+
+    &--heading {
+      font-size: 2.5rem;
+      color: $color-grey-light-2;
+      font-weight: 700;
+      // text-transform: uppercase;
+      letter-spacing: 0.75;
+      margin: 0 0 1.2rem 1.2rem;
+    }
+  }
+}

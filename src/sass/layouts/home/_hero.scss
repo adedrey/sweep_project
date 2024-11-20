@@ -1,0 +1,46 @@
+.section-hero {
+  background-image: linear-gradient(
+      rgba($color-black, 0.93),
+      rgba($color-black, 0.93)
+    ),
+    url(../../../assets/img/header.jpg);
+  background-size: cover;
+  background-position: right;
+  grid-column: full-start / col-end 6;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+  gap: 3.2rem;
+}
+
+.hero__heading {
+  margin: 0 3.2rem;
+  display: grid;
+
+  justify-content: center;
+  align-items: center;
+  // justify-items: center;
+  color: $color-grey-light-2;
+  text-transform: uppercase;
+
+  backface-visibility: hidden;
+
+  &--main {
+    display: block;
+    font-size: 5rem;
+    font-weight: 400;
+    letter-spacing: .7rem;
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+  }
+
+  &--sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: .75rem;
+    animation: moveInRight 1s ease-out;
+  }
+}

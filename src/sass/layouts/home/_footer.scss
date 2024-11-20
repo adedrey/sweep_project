@@ -1,0 +1,64 @@
+.section-footer {
+  background-color: $color-black;
+  grid-column: 1 / -1;
+
+}
+
+.footers {
+  display: grid;
+  margin: 8rem 3.2rem;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, min-content));
+  justify-content: center;
+  align-content: space-around;
+  gap: 6rem;
+}
+
+.footer {
+  display: grid;
+  gap: 1.2rem;
+
+  &__heading {
+    font-size: 1.6rem;
+    align-self: end;
+    color: rgba($color: $color-white, $alpha: 0.9);
+  }
+
+  &__nav {
+    justify-self: start;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    font-size: 1.3rem;
+    color: rgba($color: $color-white, $alpha: 0.6);
+  }
+
+  &__item {
+    display: flex;
+    gap: 1.2rem;
+    align-items: center;
+  }
+
+  &__item svg {
+      fill: rgba($color: $color-white, $alpha: 0.6);
+      height: 1.2rem;
+      width: 1.2rem;
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      font-size: 1.4rem;
+      color: currentColor;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    &:hover,
+    &:active {
+      color: rgba($color: $color-secondary-dark, $alpha: 0.9);
+    }
+  }
+}
+
+
